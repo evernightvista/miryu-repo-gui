@@ -1,0 +1,31 @@
+{
+    "KPlugin": {
+        "Id": "kcm_miryu_repo_gui",
+        "Name": "Miryu Repository Manager",
+        "Name[zh_CN]": "Miryu 软件源管理器",
+        "Name[zh_TW]": "Miryu 軟體源管理員",
+        "Name[ja]": "Miryu リポジトリマネージャ",
+        "Name[de]": "Miryu Repository Manager",
+        "Name[ko]": "Miryu 리포지토리 관리자",
+        "Name[fr]": "Gestionnaire de dépôts Miryu",
+        "Description": "Launch the Miryu Repository Manager application",
+        "Description[zh_CN]": "启动 Miryu 软件源管理器应用程序",
+        "Description[zh_TW]": "啟動 Miryu 軟體源管理員應用程式",
+        "Description[ja]": "Miryu リポジトリマネージャを起動",
+        "Description[de]": "Miryu Repository Manager-Anwendung starten",
+        "Description[ko]": "Miryu 리포지토리 관리자 프로그램 실행",
+        "Description[fr]": "Lancer l'application Gestionnaire de dépôts Miryu",
+        "Icon": "gpk-repo",
+        "Authors": [
+            { "Name": "Evernight Vista Team", "Email": "13278297951@sina.cn" }
+        ],
+        "License": "GPL-3.0-or-later",
+        "Website": "https://github.com/evernightvista/miryu-repo-gui",
+        "EnabledByDefault": true
+    },
+    "Categories": "Qt;KDE;",
+    "X-KDE-Keywords": "miryu,repo,repository,manager,software source",
+    "X-KDE-Keywords[zh_CN]": "miryu,软件源,仓库,管理",
+    "X-KDE-System-Settings-Parent-Category": "system-administration",
+    "X-KDE-Weight": 55
+}
