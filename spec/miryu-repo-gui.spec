@@ -11,6 +11,7 @@ BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  desktop-file-utils
+BuildRequires:  extra-cmake-modules
 BuildRequires:  cmake(Qt6Core)
 BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  cmake(Qt6Network)
