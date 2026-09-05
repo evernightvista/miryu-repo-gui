@@ -354,6 +354,14 @@ msgid "RPM Fusion Nonfree Updates"
 msgstr "RPM Fusion Nonfree Updates"
 
 #: RepoManager.cpp:446
+msgid "KRfoss Mirror4"
+msgstr "KRfoss Mirror4"
+
+#: RepoManager.cpp:447
+msgid "KRfoss"
+msgstr "KRfoss"
+
+#: RepoManager.cpp:448
 msgid "Fyra Labs Official"
 msgstr "Fyra Labs Offiziell"
 

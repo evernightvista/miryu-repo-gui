@@ -485,6 +485,8 @@ QMap<QString, QList<Repository>> RepoManager::getRepoSections() {
             }
         }
         QList<Mirror> mirrors;
+        mirrors << Mirror{i18n("KRfoss Mirror4"), "https://mirror4.krfoss.org/fyralabs/terra$releasever" + suffix + "/", ""};
+        mirrors << Mirror{i18n("KRfoss"), "https://mirror.krfoss.org/fyralabs/terra$releasever" + suffix + "/", ""};
         mirrors << Mirror{i18n("Fyra Labs Official"), "https://repos.fyralabs.com/terra$releasever" + suffix + "/", ""};
         mirrors << Mirror{i18n("Freedif (Germany)"), "https://mirror.freedif.org/ultramarine/terra$releasever" + suffix + "/", ""};
         mirrors << Mirror{i18n("Alebcay (USA)"), "https://mirror.alebcay.com/files/fyralabs/terra$releasever" + suffix, ""};
