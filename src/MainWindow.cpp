@@ -125,7 +125,7 @@ int MainWindow::getDefaultMirrorIndex(const QString &repoId, const QList<Mirror>
     } else if (repoId.startsWith("rpmfusion")) {
         idx = 3; // 南京大学
     } else if (repoId.startsWith("terra")) {
-        idx = 1; // Freedif (德国)
+        idx = 2; // Fyra Labs 官方源 (https://repos.fyralabs.com/terra)
     }
     if (idx >= mirrors.size()) idx = 0;
     return idx;

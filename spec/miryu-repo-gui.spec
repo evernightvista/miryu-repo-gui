@@ -1,11 +1,11 @@
 Name:           miryu-repo-gui
 Version:        1.0.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        GUI tool for managing Miryu repository mirrors
 
 License:        GPL-3.0-or-later
 URL:            https://github.com/evernightvista/miryu-repo-gui
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://github.com/evernightvista/miryu-repo-gui/archive/refs/heads/main.zip
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
@@ -36,7 +36,7 @@ KDE System Settings.
 
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -n %{name}-main
 
 
 %build
@@ -65,6 +65,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/miryu-repo-gui.deskto
 
 
 %changelog
+* Wed Oct 14 2026 KairikiFedora <13278297951@sina.cn> - 1.0.2-3
+- Revert Terra repo
+
 * Sat Sep 05 2026 KairikiFedora <13278297951@sina.cn> - 1.0.2-2
 - Add KRfoss and KRfoss Mirror4 Terra mirror sites
 - Set KRfoss Mirror4 as the default Terra mirror
