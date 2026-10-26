@@ -7,6 +7,11 @@
 #include <QFile>
 #include <QTextStream>
 
+// 部分镜像站会拒绝没有浏览器 User-Agent 的请求（返回 403）。
+// 速度测试使用与浏览器一致的 UA，避免被镜像站误判为爬虫。
+static const char * const kUserAgent =
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+
 MirrorTester::MirrorTester(QObject *parent) : QObject(parent) {
     m_manager = new QNetworkAccessManager(this);
     connect(m_manager, &QNetworkAccessManager::finished, this, &MirrorTester::onReplyFinished);
@@ -31,6 +36,7 @@ void MirrorTester::startNext() {
     }
     QString url = m_mirrors[m_currentIndex].second;
     QNetworkRequest request(QUrl(url + "repodata/repomd.xml"));
+    request.setHeader(QNetworkRequest::UserAgentHeader, QString::fromLatin1(kUserAgent));
     request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
     request.setTransferTimeout(10000);
     m_timer.start();

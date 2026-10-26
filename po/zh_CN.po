@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Miryu Repository Manager 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-11 15:19+0800\n"
+"POT-Creation-Date: 2026-10-26 12:15+0800\n"
 "PO-Revision-Date: 2027-01-01 00:00+0800\n"
 "Last-Translator: Evernight Vista Team <13278297951@sina.cn>\n"
 "Language-Team: Evernight Vista Team <13278297951@sina.cn>\n"
@@ -15,380 +15,377 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: MainWindow.cpp:64 MainWindow.cpp:71 kcm/kcm_miryu_repo_gui.cpp:41
+#: src/MainWindow.cpp:64 src/MainWindow.cpp:71 kcm/kcm_miryu_repo_gui.cpp:49
 msgid "Miryu Repository Manager"
 msgstr "Miryu 软件源管理器"
 
-#: kcm/kcm_miryu_repo_gui.cpp:48
-msgid "Manage Evernight Vista repository mirrors with speed test"
-msgstr "管理 Evernight Vista 软件源，支持镜像测速"
-
-#: kcm/kcm_miryu_repo_gui.cpp:59
-msgid "Relaunch Miryu Repository Manager"
-msgstr "重新打开 Miryu 软件源管理器"
-
-#: kcm/kcm_miryu_repo_gui.cpp:95
-msgid ""
-"Miryu Repository Manager is an external application and has been "
-"automatically launched."
-msgstr "Miryu 软件源管理器是一个外部应用程序，已自动启动。"
-
-#: kcm/kcm_miryu_repo_gui.cpp:100
-msgid "Could not launch Miryu Repository Manager. Make sure it is installed."
-msgstr "无法启动 Miryu 软件源管理器，请确认已安装。"
-
-#: kcm/kcm_miryu_repo_gui.cpp:85
-msgid "Miryu Repository Manager is already running. Window activated."
-msgstr "Miryu 软件源管理器已在运行，已激活窗口。"
-
-#: MainWindow.cpp:49
+#: src/MainWindow.cpp:75
 msgid ""
 "Each repository can independently select a mirror source. Click 'Apply' to "
 "take effect. Click 'Test Speed' to check the response time of each mirror."
 msgstr ""
-"每个仓库可独立选择镜像源。点击“应用”生效。点击“测试速度”可检查每个镜像的响应时间。"
+"每个仓库可独立选择镜像源。点击“应用”生效。点击“测试速度”可检查每个镜像的响应"
+"时间。"
 
-#: MainWindow.cpp:60
+#: src/MainWindow.cpp:86
 msgid "Evernight Vista"
 msgstr "Evernight Vista"
 
-#: MainWindow.cpp:62
+#: src/MainWindow.cpp:88
 msgid "RPM Fusion"
 msgstr "RPM Fusion"
 
-#: MainWindow.cpp:64
+#: src/MainWindow.cpp:90
 msgid "Terra"
 msgstr "Terra"
 
-#: MainWindow.cpp:73
+#: src/MainWindow.cpp:99
 msgid "Maintenance"
 msgstr "维护"
 
-#: MainWindow.cpp:78
+#: src/MainWindow.cpp:104
 msgid "Apply Changes"
 msgstr "应用更改"
 
-#: MainWindow.cpp:82
+#: src/MainWindow.cpp:108
 msgid "Refresh Cache"
 msgstr "刷新缓存"
 
-#: MainWindow.cpp:86
+#: src/MainWindow.cpp:112
 msgid "Restore Defaults"
 msgstr "恢复默认"
 
-#: MainWindow.cpp:92
+#: src/MainWindow.cpp:118
 msgid "Ready"
 msgstr "就绪"
 
-#: MainWindow.cpp:112
+#: src/MainWindow.cpp:138
 msgid "Software repositories for %1"
 msgstr "%1 的软件仓库"
 
-#: MainWindow.cpp:121
+#: src/MainWindow.cpp:147
 msgid "Enable"
 msgstr "启用"
 
-#: MainWindow.cpp:134
+#: src/MainWindow.cpp:160
 msgid "Test Speed"
 msgstr "测试速度"
 
-#: MainWindow.cpp:168
+#: src/MainWindow.cpp:194
 msgid "No testable mirrors (only baseurl supported)"
 msgstr "没有可测试的镜像（仅支持 baseurl）"
 
-#: MainWindow.cpp:168 MainWindow.cpp:238 MainWindow.cpp:285
+#: src/MainWindow.cpp:194 src/MainWindow.cpp:264 src/MainWindow.cpp:311
 msgid "Info"
 msgstr "信息"
 
-#: MainWindow.cpp:173
+#: src/MainWindow.cpp:199
 msgid "Speed Testing - %1"
 msgstr "速度测试 - %1"
 
-#: MainWindow.cpp:184
+#: src/MainWindow.cpp:210
 msgid "Close"
 msgstr "关闭"
 
-#: MainWindow.cpp:200
+#: src/MainWindow.cpp:226
 msgid "%v / %m"
 msgstr "%v / %m"
 
-#: MainWindow.cpp:211
+#: src/MainWindow.cpp:237
 msgid "%1: 403 (Access Denied)"
 msgstr "%1: 403 (拒绝访问)"
 
-#: MainWindow.cpp:213
+#: src/MainWindow.cpp:239
 msgid "%1: Failed"
 msgstr "%1: 失败"
 
-#: MainWindow.cpp:215
+#: src/MainWindow.cpp:241
 msgid "%1: %2 ms"
 msgstr "%1: %2 毫秒"
 
-#: MainWindow.cpp:238 MainWindow.cpp:285
+#: src/MainWindow.cpp:264 src/MainWindow.cpp:311
 msgid "No repositories configured"
 msgstr "未配置仓库"
 
-#: MainWindow.cpp:248 MainWindow.cpp:294
+#: src/MainWindow.cpp:274 src/MainWindow.cpp:320
 msgid "Failed to prepare repository configuration."
 msgstr "准备仓库配置失败。"
 
-#: MainWindow.cpp:248 MainWindow.cpp:294 MainWindow.cpp:473
+#: src/MainWindow.cpp:274 src/MainWindow.cpp:320 src/MainWindow.cpp:499
 msgid "Error"
 msgstr "错误"
 
-#: MainWindow.cpp:252
+#: src/MainWindow.cpp:278
 msgid "Applying configuration..."
 msgstr "正在应用配置..."
 
-#: MainWindow.cpp:257
+#: src/MainWindow.cpp:283
 msgid "This will execute 'dnf makecache'. Continue?"
 msgstr "这将执行 'dnf makecache'。继续吗？"
 
-#: MainWindow.cpp:258 MainWindow.cpp:269 MainWindow.cpp:375 MainWindow.cpp:386
-#: MainWindow.cpp:397
+#: src/MainWindow.cpp:284 src/MainWindow.cpp:295 src/MainWindow.cpp:401
+#: src/MainWindow.cpp:412 src/MainWindow.cpp:423
 msgid "Confirm"
 msgstr "确认"
 
-#: MainWindow.cpp:259 MainWindow.cpp:270 MainWindow.cpp:376 MainWindow.cpp:387
-#: MainWindow.cpp:398
+#: src/MainWindow.cpp:285 src/MainWindow.cpp:296 src/MainWindow.cpp:402
+#: src/MainWindow.cpp:413 src/MainWindow.cpp:424
 msgid "Continue"
 msgstr "继续"
 
-#: MainWindow.cpp:260 MainWindow.cpp:271 MainWindow.cpp:377 MainWindow.cpp:388
-#: MainWindow.cpp:399
+#: src/MainWindow.cpp:286 src/MainWindow.cpp:297 src/MainWindow.cpp:403
+#: src/MainWindow.cpp:414 src/MainWindow.cpp:425
 msgid "Cancel"
 msgstr "取消"
 
-#: MainWindow.cpp:263
+#: src/MainWindow.cpp:289
 msgid "Refreshing cache..."
 msgstr "正在刷新缓存..."
 
-#: MainWindow.cpp:268
+#: src/MainWindow.cpp:294
 msgid "This will restore all repositories to default configuration. Continue?"
 msgstr "这将恢复所有仓库为默认配置。继续吗？"
 
-#: MainWindow.cpp:298
+#: src/MainWindow.cpp:324
 msgid "Restoring default configuration..."
 msgstr "正在恢复默认配置..."
 
-#: MainWindow.cpp:307
+#: src/MainWindow.cpp:333
 msgid ""
 "Perform system maintenance tasks for DNF/RPM. Each action asks for "
 "administrator authentication through polkit."
 msgstr ""
 "执行 DNF/RPM 系统维护任务。每个操作都会通过 polkit 请求管理员身份验证。"
 
-#: MainWindow.cpp:313
+#: src/MainWindow.cpp:339
 msgid "Repair RPM Database"
 msgstr "修复 RPM 数据库"
 
-#: MainWindow.cpp:317
+#: src/MainWindow.cpp:343
 msgid "Clean Unused Packages (autoremove)"
 msgstr "清理未使用的软件包 (autoremove)"
 
-#: MainWindow.cpp:321
+#: src/MainWindow.cpp:347
 msgid "Synchronize Distribution (distro-sync)"
 msgstr "同步发行版 (distro-sync)"
 
-#: MainWindow.cpp:374
+#: src/MainWindow.cpp:400
 msgid "This will rebuild the RPM database using 'rpm --rebuilddb'. Continue?"
 msgstr "这将使用 'rpm --rebuilddb' 重建 RPM 数据库。继续吗？"
 
-#: MainWindow.cpp:380
+#: src/MainWindow.cpp:406
 msgid "Repairing RPM database..."
 msgstr "正在修复 RPM 数据库..."
 
-#: MainWindow.cpp:385
+#: src/MainWindow.cpp:411
 msgid ""
 "This will remove unnecessary packages via 'dnf autoremove -y'. Continue?"
 msgstr "这将通过 'dnf autoremove -y' 移除不必要的软件包。继续吗？"
 
-#: MainWindow.cpp:391
+#: src/MainWindow.cpp:417
 msgid "Cleaning unused packages..."
 msgstr "正在清理未使用的软件包..."
 
-#: MainWindow.cpp:396
+#: src/MainWindow.cpp:422
 msgid ""
-"This will synchronize your system with the repository via 'dnf distro-sync "
-"-y'. Continue?"
+"This will synchronize your system with the repository via 'dnf distro-sync -"
+"y'. Continue?"
 msgstr "这将通过 'dnf distro-sync -y' 将系统与仓库同步。继续吗？"
 
-#: MainWindow.cpp:402
+#: src/MainWindow.cpp:428
 msgid "Synchronizing distribution..."
 msgstr "正在同步发行版..."
 
-#: MainWindow.cpp:427
+#: src/MainWindow.cpp:453
 msgid "Authentication was dismissed."
 msgstr "身份验证已取消。"
 
-#: MainWindow.cpp:428
+#: src/MainWindow.cpp:454
 msgid "Canceled"
 msgstr "已取消"
 
-#: MainWindow.cpp:430
+#: src/MainWindow.cpp:456
 msgid "Not authorized, or the privileged helper was not found."
 msgstr "未授权，或未找到特权助手。"
 
-#: MainWindow.cpp:431
+#: src/MainWindow.cpp:457
 msgid "Authorization failed"
 msgstr "授权失败"
 
-#: MainWindow.cpp:437
+#: src/MainWindow.cpp:463
 msgid "Repository configuration applied."
 msgstr "仓库配置已应用。"
 
-#: MainWindow.cpp:438
+#: src/MainWindow.cpp:464
 msgid "Configuration applied"
 msgstr "配置已应用"
 
-#: MainWindow.cpp:453
+#: src/MainWindow.cpp:479
 msgid "Failed to apply configuration (exit code %1)."
 msgstr "应用配置失败 (退出码 %1)。"
 
-#: MainWindow.cpp:454
+#: src/MainWindow.cpp:480
 msgid "Failed to apply configuration"
 msgstr "应用配置失败"
 
-#: MainWindow.cpp:459
+#: src/MainWindow.cpp:485
 msgid "Command completed successfully."
 msgstr "命令成功完成。"
 
-#: MainWindow.cpp:460
+#: src/MainWindow.cpp:486
 msgid "Task finished"
 msgstr "任务完成"
 
-#: MainWindow.cpp:462
+#: src/MainWindow.cpp:488
 msgid "Command failed with exit code %1."
 msgstr "命令失败，退出码 %1。"
 
-#: MainWindow.cpp:463
+#: src/MainWindow.cpp:489
 msgid "Task failed"
 msgstr "任务失败"
 
-#: MainWindow.cpp:471
+#: src/MainWindow.cpp:497
 msgid "Success"
 msgstr "成功"
 
-#: RepoManager.cpp:376
+#: src/RepoManager.cpp:418
 msgid "Official (metalink)"
 msgstr "官方 (metalink)"
 
-#: RepoManager.cpp:377 RepoManager.cpp:410
+#: src/RepoManager.cpp:419 src/RepoManager.cpp:452
 msgid "Tsinghua (TUNA)"
 msgstr "清华大学 (TUNA)"
 
-#: RepoManager.cpp:378 RepoManager.cpp:411
+#: src/RepoManager.cpp:420 src/RepoManager.cpp:453
 msgid "University of Science and Technology of China (USTC)"
 msgstr "中国科学技术大学 (USTC)"
 
-#: RepoManager.cpp:379 RepoManager.cpp:413
+#: src/RepoManager.cpp:421 src/RepoManager.cpp:455
 msgid "Alibaba Cloud"
 msgstr "阿里云"
 
-#: RepoManager.cpp:380 RepoManager.cpp:412
+#: src/RepoManager.cpp:422 src/RepoManager.cpp:454
 msgid "Nanjing University"
 msgstr "南京大学"
 
-#: RepoManager.cpp:381
+#: src/RepoManager.cpp:423
 msgid "Jilin University"
 msgstr "吉林大学"
 
-#: RepoManager.cpp:382 RepoManager.cpp:414
+#: src/RepoManager.cpp:424 src/RepoManager.cpp:456
 msgid "Beijing Foreign Studies University (BFSU)"
 msgstr "北京外国语大学 (BFSU)"
 
-#: RepoManager.cpp:383
+#: src/RepoManager.cpp:425
 msgid "JAIST (Japan)"
 msgstr "JAIST (日本)"
 
-#: RepoManager.cpp:384
+#: src/RepoManager.cpp:426
 msgid "Yamagata University (Japan)"
 msgstr "山形大学 (日本)"
 
-#: RepoManager.cpp:385
+#: src/RepoManager.cpp:427
 msgid "Kernel.org (USA)"
 msgstr "Kernel.org (美国)"
 
-#: RepoManager.cpp:386
+#: src/RepoManager.cpp:428
 msgid "Kakao (Korea)"
 msgstr "Kakao (韩国)"
 
-#: RepoManager.cpp:387
+#: src/RepoManager.cpp:429
 msgid "KAIST (Korea)"
 msgstr "KAIST (韩国)"
 
-#: RepoManager.cpp:393
+#: src/RepoManager.cpp:435
 msgid "Evernight Vista $releasever - $basearch"
 msgstr "Evernight Vista $releasever - $basearch"
 
-#: RepoManager.cpp:395
+#: src/RepoManager.cpp:437
 msgid "Evernight Vista $releasever - $basearch - Updates"
 msgstr "Evernight Vista $releasever - $basearch - 更新"
 
-#: RepoManager.cpp:409
+#: src/RepoManager.cpp:451
 msgid "Official metalink"
 msgstr "官方 metalink"
 
-#: RepoManager.cpp:415
+#: src/RepoManager.cpp:457
 msgid "Rackspace (USA)"
 msgstr "Rackspace (美国)"
 
-#: RepoManager.cpp:416
+#: src/RepoManager.cpp:458
 msgid "RIT (USA)"
 msgstr "RIT (美国)"
 
-#: RepoManager.cpp:421
+#: src/RepoManager.cpp:463
 msgid "RPM Fusion Free"
 msgstr "RPM Fusion Free"
 
-#: RepoManager.cpp:423
+#: src/RepoManager.cpp:465
 msgid "RPM Fusion Free Updates"
 msgstr "RPM Fusion Free 更新"
 
-#: RepoManager.cpp:425
+#: src/RepoManager.cpp:467
 msgid "RPM Fusion Nonfree"
 msgstr "RPM Fusion Nonfree"
 
-#: RepoManager.cpp:427
+#: src/RepoManager.cpp:469
 msgid "RPM Fusion Nonfree Updates"
 msgstr "RPM Fusion Nonfree 更新"
 
-#: RepoManager.cpp:446
-msgid "KRfoss Mirror4"
-msgstr "KRfoss Mirror4"
+#: src/RepoManager.cpp:488
+msgid "Nanyang Institute of Technology (NYIST)"
+msgstr "南阳理工学院 (NYIST)"
 
-#: RepoManager.cpp:447
-msgid "KRfoss"
-msgstr "KRfoss"
-
-#: RepoManager.cpp:448
+#: src/RepoManager.cpp:489
 msgid "Fyra Labs Official"
 msgstr "Fyra Labs 官方"
 
-#: RepoManager.cpp:447
+#: src/RepoManager.cpp:490
 msgid "Freedif (Germany)"
 msgstr "Freedif (德国)"
 
-#: RepoManager.cpp:448
+#: src/RepoManager.cpp:491
 msgid "Alebcay (USA)"
 msgstr "Alebcay (美国)"
 
-#: RepoManager.cpp:449
+#: src/RepoManager.cpp:492
 msgid "June Fish (USA)"
 msgstr "June Fish (美国)"
 
-#: RepoManager.cpp:453
+#: src/RepoManager.cpp:496
 msgid "Terra Base"
 msgstr "Terra Base"
 
-#: RepoManager.cpp:454
+#: src/RepoManager.cpp:497
 msgid "Terra Extras"
 msgstr "Terra Extras"
 
-#: RepoManager.cpp:455
+#: src/RepoManager.cpp:498
 msgid "Terra Mesa"
 msgstr "Terra Mesa"
 
-#: RepoManager.cpp:456
+#: src/RepoManager.cpp:499
 msgid "Terra NVIDIA"
 msgstr "Terra NVIDIA"
+
+#: kcm/kcm_miryu_repo_gui.cpp:57
+msgid "Manage Evernight Vista repository mirrors with speed test"
+msgstr "管理 Evernight Vista 软件源，支持镜像测速"
+
+#: kcm/kcm_miryu_repo_gui.cpp:67
+msgid "Relaunch Miryu Repository Manager"
+msgstr "重新打开 Miryu 软件源管理器"
+
+#: kcm/kcm_miryu_repo_gui.cpp:110
+msgid "Miryu Repository Manager is already running. Window activated."
+msgstr "Miryu 软件源管理器已在运行，已激活窗口。"
+
+#: kcm/kcm_miryu_repo_gui.cpp:120
+msgid ""
+"Miryu Repository Manager is an external application and has been "
+"automatically launched."
+msgstr "Miryu 软件源管理器是一个外部应用程序，已自动启动。"
+
+#: kcm/kcm_miryu_repo_gui.cpp:125
+msgid "Could not launch Miryu Repository Manager. Make sure it is installed."
+msgstr "无法启动 Miryu 软件源管理器，请确认已安装。"
