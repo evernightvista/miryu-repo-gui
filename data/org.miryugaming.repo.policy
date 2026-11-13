@@ -96,39 +96,14 @@
     <annotate key="org.freedesktop.policykit.exec.argv1">autoremove</annotate>
   </action>
 
-  <action id="org.miryugaming.repo.distrosync">
-    <description>Synchronize installed packages to repository versions (dnf distro-sync)</description>
-    <description xml:lang="zh_CN">将已安装的软件包同步到仓库版本（dnf distro-sync）</description>
-    <description xml:lang="zh_TW">將已安裝的軟體包同步至倉庫版本（dnf distro-sync）</description>
-    <description xml:lang="ja">インストール済みパッケージをリポジトリバージョンに同期します（dnf distro-sync）</description>
-    <description xml:lang="ko">설치된 패키지를 저장소 버전과 동기화 (dnf distro-sync)</description>
-    <description xml:lang="de">Installierte Pakete mit den Repository-Versionen synchronisieren (dnf distro-sync)</description>
-    <description xml:lang="fr">Synchroniser les paquets installés avec les versions du dépôt (dnf distro-sync)</description>
-    <message>Authentication is required to synchronize the distribution</message>
-    <message xml:lang="zh_CN">同步发行版需要身份验证</message>
-    <message xml:lang="zh_TW">同步發行版需要身分驗證</message>
-    <message xml:lang="ja">ディストリビューションを同期するには認証が必要です</message>
-    <message xml:lang="ko">배포판을 동기화하려면 인증이 필요합니다</message>
-    <message xml:lang="de">Authentifizierung ist erforderlich, um die Distribution zu synchronisieren</message>
-    <message xml:lang="fr">Une authentification est requise pour synchroniser la distribution</message>
-    <icon_name>system-software-update</icon_name>
-    <defaults>
-      <allow_any>no</allow_any>
-      <allow_inactive>auth_admin</allow_inactive>
-      <allow_active>auth_admin</allow_active>
-    </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/miryu-repo-helper</annotate>
-    <annotate key="org.freedesktop.policykit.exec.argv1">distro-sync</annotate>
-  </action>
-
   <action id="org.miryugaming.repo.refreshcache">
-    <description>Refresh the DNF package cache (dnf makecache)</description>
-    <description xml:lang="zh_CN">刷新 DNF 软件包缓存（dnf makecache）</description>
-    <description xml:lang="zh_TW">重新整理 DNF 軟體包快取（dnf makecache）</description>
-    <description xml:lang="ja">DNFパッケージキャッシュを更新します（dnf makecache）</description>
-    <description xml:lang="ko">DNF 패키지 캐시 새로 고침 (dnf makecache)</description>
-    <description xml:lang="de">DNF-Paket-Cache aktualisieren (dnf makecache)</description>
-    <description xml:lang="fr">Rafraîchir le cache des paquets DNF (dnf makecache)</description>
+    <description>Refresh the DNF package cache (dnf makecache --refresh)</description>
+    <description xml:lang="zh_CN">刷新 DNF 软件包缓存（dnf makecache --refresh）</description>
+    <description xml:lang="zh_TW">重新整理 DNF 軟體包快取（dnf makecache --refresh）</description>
+    <description xml:lang="ja">DNFパッケージキャッシュを更新します（dnf makecache --refresh）</description>
+    <description xml:lang="ko">DNF 패키지 캐시 새로 고침 (dnf makecache --refresh)</description>
+    <description xml:lang="de">DNF-Paket-Cache aktualisieren (dnf makecache --refresh)</description>
+    <description xml:lang="fr">Rafraîchir le cache des paquets DNF (dnf makecache --refresh)</description>
     <message>Authentication is required to refresh the package cache</message>
     <message xml:lang="zh_CN">刷新软件包缓存需要身份验证</message>
     <message xml:lang="zh_TW">重新整理軟體包快取需要身分驗證</message>

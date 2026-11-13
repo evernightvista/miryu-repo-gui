@@ -8,10 +8,12 @@
 #include <QDialog>
 #include <QProgressBar>
 #include <QListWidget>
-#include <QTextEdit>
+#include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
 #include "RepoManager.h"
+
+class QLabel;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -20,6 +22,9 @@ public:
 
 public Q_SLOTS:
     void showWindow();
+
+protected:
+    void changeEvent(QEvent *event) override;
 
 private slots:
     void onApply();
@@ -33,12 +38,13 @@ private slots:
     // 维护功能槽
     void onRepairRpmDB();
     void onAutoRemove();
-    void onDistroSync();
     void onProcessFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void onProcessReadyRead();
 
 private:
     void setupUI();
+    void updateAdaptiveColors();
+    void applyRepositories(const QList<Repository> &repos);
     QWidget* createSectionPage(const QString &sectionName, const QList<Repository> &repos);
     QWidget* createMaintenancePage();
 
@@ -52,6 +58,7 @@ private:
     QTabWidget *m_tabWidget;
     QMap<QString, QPair<QCheckBox*, QComboBox*>> m_repoControls;
     QMap<QString, Repository> m_repoMap;
+    QList<QLabel*> m_adaptiveTextLabels;
 
     QDialog *m_speedDialog = nullptr;
     QProgressBar *m_progressBar = nullptr;
@@ -59,6 +66,7 @@ private:
 
     // 顶部操作按钮
     QPushButton *m_applyBtn = nullptr;
+    QList<QPushButton*> m_scopedActionButtons;
     QPushButton *m_refreshBtn = nullptr;
     QPushButton *m_restoreBtn = nullptr;
 
@@ -66,8 +74,7 @@ private:
     QWidget *m_maintenancePage = nullptr;
     QPushButton *m_repairBtn = nullptr;
     QPushButton *m_autoremoveBtn = nullptr;
-    QPushButton *m_distroSyncBtn = nullptr;
-    QTextEdit *m_outputEdit = nullptr;
+    QPlainTextEdit *m_outputEdit = nullptr;
     QProcess *m_process = nullptr;
 
     // 当前正在运行的操作标记，用于 onProcessFinished 区分处理

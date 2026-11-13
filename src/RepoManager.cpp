@@ -345,7 +345,7 @@ bool RepoManager::stageConfig(const QMap<QString, QPair<Mirror, bool>> &states, 
 
 bool RepoManager::refreshCache() {
     QProcess proc;
-    proc.start("dnf", {"makecache"});
+    proc.start("dnf", {"makecache", "--refresh"});
     proc.waitForFinished(-1);
     return proc.exitCode() == 0;
 }

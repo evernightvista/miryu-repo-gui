@@ -1,14 +1,14 @@
-# Copyright (C) 2027 Evernight Vista Team
-# This file is distributed under the same license as the Evernight Vista Repository Manager package.
-# Evernight Vista Team <13278297951@sina.cn>, 2027.
+# Copyright (C) 2027 Miryu Repository Manager
+# This file is distributed under the same license as the Miryu Repository Manager package.
+# KairikiFedora <13278297951@sina.cn>, 2027.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Miryu Repository Manager 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 12:15+0800\n"
-"PO-Revision-Date: 2027-01-01 00:00+0800\n"
-"Last-Translator: Evernight Vista Team <13278297951@sina.cn>\n"
+"POT-Creation-Date: 2026-11-13 19:43+0800\n"
+"PO-Revision-Date: 2026-11-13 20:00+0800\n"
+"Last-Translator: KairikiFedora <13278297951@sina.cn>\n"
 "Language-Team: Evernight Vista Team <13278297951@sina.cn>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Miryu Repository Manager"
 msgstr "Miryu 软件源管理器"
 
-#: src/MainWindow.cpp:75
+#: src/MainWindow.cpp:76
 msgid ""
 "Each repository can independently select a mirror source. Click 'Apply' to "
 "take effect. Click 'Test Speed' to check the response time of each mirror."
@@ -27,224 +27,210 @@ msgstr ""
 "每个仓库可独立选择镜像源。点击“应用”生效。点击“测试速度”可检查每个镜像的响应"
 "时间。"
 
-#: src/MainWindow.cpp:86
+#: src/MainWindow.cpp:87
 msgid "Evernight Vista"
 msgstr "Evernight Vista"
 
-#: src/MainWindow.cpp:88
+#: src/MainWindow.cpp:89
 msgid "RPM Fusion"
 msgstr "RPM Fusion"
 
-#: src/MainWindow.cpp:90
+#: src/MainWindow.cpp:91
 msgid "Terra"
 msgstr "Terra"
 
-#: src/MainWindow.cpp:99
+#: src/MainWindow.cpp:100
 msgid "Maintenance"
 msgstr "维护"
 
-#: src/MainWindow.cpp:104
+#: src/MainWindow.cpp:105 src/MainWindow.cpp:196
 msgid "Apply Changes"
 msgstr "应用更改"
 
-#: src/MainWindow.cpp:108
+#: src/MainWindow.cpp:109
 msgid "Refresh Cache"
 msgstr "刷新缓存"
 
-#: src/MainWindow.cpp:112
+#: src/MainWindow.cpp:113 src/MainWindow.cpp:203
 msgid "Restore Defaults"
 msgstr "恢复默认"
 
-#: src/MainWindow.cpp:118
+#: src/MainWindow.cpp:119
 msgid "Ready"
 msgstr "就绪"
 
-#: src/MainWindow.cpp:138
+#: src/MainWindow.cpp:166
 msgid "Software repositories for %1"
 msgstr "%1 的软件仓库"
 
-#: src/MainWindow.cpp:147
+#: src/MainWindow.cpp:175
 msgid "Enable"
 msgstr "启用"
 
-#: src/MainWindow.cpp:160
+#: src/MainWindow.cpp:188
 msgid "Test Speed"
 msgstr "测试速度"
 
-#: src/MainWindow.cpp:194
+#: src/MainWindow.cpp:244
 msgid "No testable mirrors (only baseurl supported)"
 msgstr "没有可测试的镜像（仅支持 baseurl）"
 
-#: src/MainWindow.cpp:194 src/MainWindow.cpp:264 src/MainWindow.cpp:311
+#: src/MainWindow.cpp:244 src/MainWindow.cpp:315 src/MainWindow.cpp:362
 msgid "Info"
 msgstr "信息"
 
-#: src/MainWindow.cpp:199
+#: src/MainWindow.cpp:249
 msgid "Speed Testing - %1"
 msgstr "速度测试 - %1"
 
-#: src/MainWindow.cpp:210
+#: src/MainWindow.cpp:260
 msgid "Close"
 msgstr "关闭"
 
-#: src/MainWindow.cpp:226
+#: src/MainWindow.cpp:276
 msgid "%v / %m"
 msgstr "%v / %m"
 
-#: src/MainWindow.cpp:237
+#: src/MainWindow.cpp:287
 msgid "%1: 403 (Access Denied)"
 msgstr "%1: 403 (拒绝访问)"
 
-#: src/MainWindow.cpp:239
+#: src/MainWindow.cpp:289
 msgid "%1: Failed"
 msgstr "%1: 失败"
 
-#: src/MainWindow.cpp:241
+#: src/MainWindow.cpp:291
 msgid "%1: %2 ms"
 msgstr "%1: %2 毫秒"
 
-#: src/MainWindow.cpp:264 src/MainWindow.cpp:311
+#: src/MainWindow.cpp:315 src/MainWindow.cpp:362
 msgid "No repositories configured"
 msgstr "未配置仓库"
 
-#: src/MainWindow.cpp:274 src/MainWindow.cpp:320
+#: src/MainWindow.cpp:325 src/MainWindow.cpp:371
 msgid "Failed to prepare repository configuration."
 msgstr "准备仓库配置失败。"
 
-#: src/MainWindow.cpp:274 src/MainWindow.cpp:320 src/MainWindow.cpp:499
+#: src/MainWindow.cpp:325 src/MainWindow.cpp:371 src/MainWindow.cpp:536
 msgid "Error"
 msgstr "错误"
 
-#: src/MainWindow.cpp:278
+#: src/MainWindow.cpp:329
 msgid "Applying configuration..."
 msgstr "正在应用配置..."
 
-#: src/MainWindow.cpp:283
-msgid "This will execute 'dnf makecache'. Continue?"
-msgstr "这将执行 'dnf makecache'。继续吗？"
+#: src/MainWindow.cpp:334
+msgid "This will execute 'dnf makecache --refresh'. Continue?"
+msgstr "这将执行 'dnf makecache --refresh'。继续吗？"
 
-#: src/MainWindow.cpp:284 src/MainWindow.cpp:295 src/MainWindow.cpp:401
-#: src/MainWindow.cpp:412 src/MainWindow.cpp:423
+#: src/MainWindow.cpp:335 src/MainWindow.cpp:346 src/MainWindow.cpp:449
+#: src/MainWindow.cpp:460
 msgid "Confirm"
 msgstr "确认"
 
-#: src/MainWindow.cpp:285 src/MainWindow.cpp:296 src/MainWindow.cpp:402
-#: src/MainWindow.cpp:413 src/MainWindow.cpp:424
+#: src/MainWindow.cpp:336 src/MainWindow.cpp:347 src/MainWindow.cpp:450
+#: src/MainWindow.cpp:461
 msgid "Continue"
 msgstr "继续"
 
-#: src/MainWindow.cpp:286 src/MainWindow.cpp:297 src/MainWindow.cpp:403
-#: src/MainWindow.cpp:414 src/MainWindow.cpp:425
+#: src/MainWindow.cpp:337 src/MainWindow.cpp:348 src/MainWindow.cpp:451
+#: src/MainWindow.cpp:462
 msgid "Cancel"
 msgstr "取消"
 
-#: src/MainWindow.cpp:289
+#: src/MainWindow.cpp:340
 msgid "Refreshing cache..."
 msgstr "正在刷新缓存..."
 
-#: src/MainWindow.cpp:294
+#: src/MainWindow.cpp:345
 msgid "This will restore all repositories to default configuration. Continue?"
 msgstr "这将恢复所有仓库为默认配置。继续吗？"
 
-#: src/MainWindow.cpp:324
+#: src/MainWindow.cpp:375
 msgid "Restoring default configuration..."
 msgstr "正在恢复默认配置..."
 
-#: src/MainWindow.cpp:333
+#: src/MainWindow.cpp:384
 msgid ""
 "Perform system maintenance tasks for DNF/RPM. Each action asks for "
 "administrator authentication through polkit."
 msgstr ""
 "执行 DNF/RPM 系统维护任务。每个操作都会通过 polkit 请求管理员身份验证。"
 
-#: src/MainWindow.cpp:339
+#: src/MainWindow.cpp:390
 msgid "Repair RPM Database"
 msgstr "修复 RPM 数据库"
 
-#: src/MainWindow.cpp:343
+#: src/MainWindow.cpp:394
 msgid "Clean Unused Packages (autoremove)"
 msgstr "清理未使用的软件包 (autoremove)"
 
-#: src/MainWindow.cpp:347
-msgid "Synchronize Distribution (distro-sync)"
-msgstr "同步发行版 (distro-sync)"
-
-#: src/MainWindow.cpp:400
+#: src/MainWindow.cpp:448
 msgid "This will rebuild the RPM database using 'rpm --rebuilddb'. Continue?"
 msgstr "这将使用 'rpm --rebuilddb' 重建 RPM 数据库。继续吗？"
 
-#: src/MainWindow.cpp:406
+#: src/MainWindow.cpp:454
 msgid "Repairing RPM database..."
 msgstr "正在修复 RPM 数据库..."
 
-#: src/MainWindow.cpp:411
+#: src/MainWindow.cpp:459
 msgid ""
 "This will remove unnecessary packages via 'dnf autoremove -y'. Continue?"
 msgstr "这将通过 'dnf autoremove -y' 移除不必要的软件包。继续吗？"
 
-#: src/MainWindow.cpp:417
+#: src/MainWindow.cpp:465
 msgid "Cleaning unused packages..."
 msgstr "正在清理未使用的软件包..."
 
-#: src/MainWindow.cpp:422
-msgid ""
-"This will synchronize your system with the repository via 'dnf distro-sync -"
-"y'. Continue?"
-msgstr "这将通过 'dnf distro-sync -y' 将系统与仓库同步。继续吗？"
-
-#: src/MainWindow.cpp:428
-msgid "Synchronizing distribution..."
-msgstr "正在同步发行版..."
-
-#: src/MainWindow.cpp:453
+#: src/MainWindow.cpp:490
 msgid "Authentication was dismissed."
 msgstr "身份验证已取消。"
 
-#: src/MainWindow.cpp:454
+#: src/MainWindow.cpp:491
 msgid "Canceled"
 msgstr "已取消"
 
-#: src/MainWindow.cpp:456
+#: src/MainWindow.cpp:493
 msgid "Not authorized, or the privileged helper was not found."
 msgstr "未授权，或未找到特权助手。"
 
-#: src/MainWindow.cpp:457
+#: src/MainWindow.cpp:494
 msgid "Authorization failed"
 msgstr "授权失败"
 
-#: src/MainWindow.cpp:463
+#: src/MainWindow.cpp:500
 msgid "Repository configuration applied."
 msgstr "仓库配置已应用。"
 
-#: src/MainWindow.cpp:464
+#: src/MainWindow.cpp:501
 msgid "Configuration applied"
 msgstr "配置已应用"
 
-#: src/MainWindow.cpp:479
+#: src/MainWindow.cpp:516
 msgid "Failed to apply configuration (exit code %1)."
 msgstr "应用配置失败 (退出码 %1)。"
 
-#: src/MainWindow.cpp:480
+#: src/MainWindow.cpp:517
 msgid "Failed to apply configuration"
 msgstr "应用配置失败"
 
-#: src/MainWindow.cpp:485
+#: src/MainWindow.cpp:522
 msgid "Command completed successfully."
 msgstr "命令成功完成。"
 
-#: src/MainWindow.cpp:486
+#: src/MainWindow.cpp:523
 msgid "Task finished"
 msgstr "任务完成"
 
-#: src/MainWindow.cpp:488
+#: src/MainWindow.cpp:525
 msgid "Command failed with exit code %1."
 msgstr "命令失败，退出码 %1。"
 
-#: src/MainWindow.cpp:489
+#: src/MainWindow.cpp:526
 msgid "Task failed"
 msgstr "任务失败"
 
-#: src/MainWindow.cpp:497
+#: src/MainWindow.cpp:534
 msgid "Success"
 msgstr "成功"
 

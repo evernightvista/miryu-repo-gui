@@ -1,90 +1,88 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2027 miryu-repo-helper
 # This file is distributed under the same license as the miryu-repo-helper package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# KairikiFedora <13278297951@sina.cn>, 2027.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: miryu-repo-helper 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-11 12:10+0800\n"
+"POT-Creation-Date: 2026-11-13 19:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: KairikiFedora <13278297951@sina.cn>\n"
+"Language-Team: Evernight Vista Team <13278297951@sina.cn>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: evernight-vista-repo-helper.cpp:115
-#: evernight-vista-repo-helper.cpp:119
+#: helper/evernight-vista-repo-helper.cpp:126
+#: helper/evernight-vista-repo-helper.cpp:130
 msgid "Invalid staging directory: "
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:115
+#: helper/evernight-vista-repo-helper.cpp:126
 msgid "(empty)"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:127
+#: helper/evernight-vista-repo-helper.cpp:138
 msgid "Cannot open staging directory: "
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:142
+#: helper/evernight-vista-repo-helper.cpp:153
 #, c-format
 msgid "Skipping non-regular file: %s\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:149
+#: helper/evernight-vista-repo-helper.cpp:160
 #, c-format
 msgid "Skipping non-repo file: %s\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:156
+#: helper/evernight-vista-repo-helper.cpp:167
 msgid "No repository files to apply."
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:176
+#: helper/evernight-vista-repo-helper.cpp:187
 #, c-format
 msgid "Warning: failed to back up %s\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:182
+#: helper/evernight-vista-repo-helper.cpp:193
 #, c-format
 msgid "Error: failed to install %s: %s\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:187
+#: helper/evernight-vista-repo-helper.cpp:198
 #, c-format
 msgid "Warning: failed to set permissions on %s: %s\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:189
+#: helper/evernight-vista-repo-helper.cpp:200
 #, c-format
 msgid "Applied: %s\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:197
+#: helper/evernight-vista-repo-helper.cpp:208
 msgid "No repository files were applied."
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:201
+#: helper/evernight-vista-repo-helper.cpp:212
 #, c-format
 msgid "Repository configuration updated (%d file(s)).\n"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:216
+#: helper/evernight-vista-repo-helper.cpp:227
 msgid "Failed to execute "
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:223
-msgid "Usage: evernight-vista-repo-helper "
+#: helper/evernight-vista-repo-helper.cpp:234
+msgid "Usage: miryu-repo-helper "
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:224
-msgid "<apply|rebuilddb|autoremove|distro-sync|refresh-cache> [args]"
+#: helper/evernight-vista-repo-helper.cpp:235
+msgid "<apply|rebuilddb|autoremove|refresh-cache> [args]"
 msgstr ""
 
-#: evernight-vista-repo-helper.cpp:241
+#: helper/evernight-vista-repo-helper.cpp:250
 msgid "Unknown subcommand: "
 msgstr ""

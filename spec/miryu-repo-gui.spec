@@ -1,6 +1,6 @@
 Name:           miryu-repo-gui
-Version:        1.0.2
-Release:        4%{?dist}
+Version:        45.0.0
+Release:        1%{?dist}
 Summary:        GUI tool for managing Miryu repository mirrors
 
 License:        GPL-3.0-or-later
@@ -65,6 +65,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/miryu-repo-gui.deskto
 
 
 %changelog
+* Fri Nov 13 2026 KairikiFedora <13278297951@sina.cn> - 45.0.0-1
+- Fix BUG
+
 * Mon Oct 26 2026 KairikiFedora <13278297951@sina.cn> - 1.0.2-4
 - Change Terra NYIST as Default
 

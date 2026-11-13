@@ -70,10 +70,11 @@ void MainWindow::setupUI() {
 
     QLabel *title = new QLabel(i18n("Miryu Repository Manager"));
     title->setStyleSheet("font-size: 18pt; font-weight: bold;");
+    m_adaptiveTextLabels.append(title);
     mainLayout->addWidget(title);
 
     QLabel *info = new QLabel(i18n("Each repository can independently select a mirror source. Click 'Apply' to take effect. Click 'Test Speed' to check the response time of each mirror."));
-    info->setStyleSheet("color: gray;");
+    m_adaptiveTextLabels.append(info);
     mainLayout->addWidget(info);
 
     m_tabWidget = new QTabWidget(this);
@@ -116,6 +117,33 @@ void MainWindow::setupUI() {
     mainLayout->addLayout(btnLayout);
 
     statusBar()->showMessage(i18n("Ready"));
+    updateAdaptiveColors();
+}
+
+void MainWindow::updateAdaptiveColors() {
+    const bool darkMode = palette().color(QPalette::Window).lightness() < 128;
+    const QColor textColor = darkMode ? QColor(Qt::white) : QColor(Qt::black);
+
+    for (QLabel *label : m_adaptiveTextLabels) {
+        QPalette labelPalette = label->palette();
+        labelPalette.setColor(QPalette::WindowText, textColor);
+        label->setPalette(labelPalette);
+    }
+
+    if (m_outputEdit) {
+        QPalette outputPalette = m_outputEdit->palette();
+        outputPalette.setColor(QPalette::Text, textColor);
+        outputPalette.setColor(QPalette::WindowText, textColor);
+        m_outputEdit->setPalette(outputPalette);
+    }
+}
+
+void MainWindow::changeEvent(QEvent *event) {
+    QMainWindow::changeEvent(event);
+    if (event->type() == QEvent::PaletteChange ||
+        event->type() == QEvent::ApplicationPaletteChange) {
+        updateAdaptiveColors();
+    }
 }
 
 int MainWindow::getDefaultMirrorIndex(const QString &repoId, const QList<Mirror> &mirrors) const {
@@ -136,7 +164,7 @@ QWidget* MainWindow::createSectionPage(const QString &sectionName, const QList<R
     QVBoxLayout *layout = new QVBoxLayout(page);
 
     QLabel *desc = new QLabel(i18n("Software repositories for %1", sectionName));
-    desc->setStyleSheet("color: gray;");
+    m_adaptiveTextLabels.append(desc);
     layout->addWidget(desc);
 
     for (const Repository &repo : repos) {
@@ -164,10 +192,31 @@ QWidget* MainWindow::createSectionPage(const QString &sectionName, const QList<R
         rowLayout->addWidget(speedBtn);
 
         rowLayout->addStretch();
+
+        QPushButton *repoApplyBtn = new QPushButton(i18n("Apply Changes"));
+        connect(repoApplyBtn, &QPushButton::clicked, this, [this, repo]() {
+            applyRepositories(QList<Repository>{repo});
+        });
+        rowLayout->addWidget(repoApplyBtn);
+        m_scopedActionButtons.append(repoApplyBtn);
+
+        QPushButton *repoRestoreBtn = new QPushButton(i18n("Restore Defaults"));
+        connect(repoRestoreBtn, &QPushButton::clicked, this, [this, repo]() {
+            const auto controls = m_repoControls.value(repo.id);
+            controls.first->setChecked(repo.enabled);
+            int defaultIndex = getDefaultMirrorIndex(repo.id, repo.mirrors);
+            if (defaultIndex >= 0 && defaultIndex < controls.second->count())
+                controls.second->setCurrentIndex(defaultIndex);
+            applyRepositories(QList<Repository>{repo});
+        });
+        rowLayout->addWidget(repoRestoreBtn);
+        m_scopedActionButtons.append(repoRestoreBtn);
+
         groupLayout->addLayout(rowLayout);
 
         QLabel *nameLabel = new QLabel(m_manager->expandVars(repo.name, repo.id));
-        nameLabel->setStyleSheet("color: gray; font-size: 9pt;");
+        nameLabel->setStyleSheet("font-size: 9pt;");
+        m_adaptiveTextLabels.append(nameLabel);
         groupLayout->addWidget(nameLabel);
 
         layout->addWidget(groupBox);
@@ -177,6 +226,7 @@ QWidget* MainWindow::createSectionPage(const QString &sectionName, const QList<R
     }
 
     layout->addStretch();
+
     return page;
 }
 
@@ -247,17 +297,18 @@ void MainWindow::onTestFinished(const QList<QPair<QString, int>> &results) {
 // ------------------- 仓库配置 -------------------
 
 void MainWindow::onApply() {
+    applyRepositories(m_repoMap.values());
+}
+
+void MainWindow::applyRepositories(const QList<Repository> &repos) {
     QMap<QString, QPair<Mirror, bool>> states;
-    for (auto it = m_repoControls.begin(); it != m_repoControls.end(); ++it) {
-        QString id = it.key();
-        QCheckBox *cb = it.value().first;
-        QComboBox *combo = it.value().second;
-        const Repository &repo = m_repoMap[id];
-        if (!repo.mirrors.isEmpty()) {
-            int idx = combo->currentIndex();
-            Mirror mirror = repo.mirrors[idx];
-            states[id] = qMakePair(mirror, cb->isChecked());
-        }
+    for (const Repository &repo : repos) {
+        if (repo.mirrors.isEmpty())
+            continue;
+
+        const auto controls = m_repoControls.value(repo.id);
+        int idx = controls.second->currentIndex();
+        states[repo.id] = qMakePair(repo.mirrors[idx], controls.first->isChecked());
     }
 
     if (states.isEmpty()) {
@@ -280,7 +331,7 @@ void MainWindow::onApply() {
 
 void MainWindow::onRefreshCache() {
     int ret = KMessageBox::questionTwoActions(this,
-                                                 i18n("This will execute 'dnf makecache'. Continue?"),
+                                                 i18n("This will execute 'dnf makecache --refresh'. Continue?"),
                                                  i18n("Confirm"),
                                                  KGuiItem(i18n("Continue")),
                                                  KGuiItem(i18n("Cancel")));
@@ -331,7 +382,7 @@ QWidget* MainWindow::createMaintenancePage() {
     QVBoxLayout *layout = new QVBoxLayout(page);
 
     QLabel *info = new QLabel(i18n("Perform system maintenance tasks for DNF/RPM. Each action asks for administrator authentication through polkit."));
-    info->setStyleSheet("color: gray;");
+    m_adaptiveTextLabels.append(info);
     info->setWordWrap(true);
     layout->addWidget(info);
 
@@ -344,14 +395,10 @@ QWidget* MainWindow::createMaintenancePage() {
     connect(m_autoremoveBtn, &QPushButton::clicked, this, &MainWindow::onAutoRemove);
     btnLayout->addWidget(m_autoremoveBtn);
 
-    m_distroSyncBtn = new QPushButton(i18n("Synchronize Distribution (distro-sync)"));
-    connect(m_distroSyncBtn, &QPushButton::clicked, this, &MainWindow::onDistroSync);
-    btnLayout->addWidget(m_distroSyncBtn);
-
     btnLayout->addStretch();
     layout->addLayout(btnLayout);
 
-    m_outputEdit = new QTextEdit(page);
+    m_outputEdit = new QPlainTextEdit(page);
     m_outputEdit->setReadOnly(true);
     m_outputEdit->setFont(QFont("Monospace", 10));
     layout->addWidget(m_outputEdit);
@@ -388,11 +435,12 @@ void MainWindow::runHelper(const QString &sub, const QString &extra,
 
 void MainWindow::setActionButtonsEnabled(bool enabled) {
     if (m_applyBtn) m_applyBtn->setEnabled(enabled);
+    for (QPushButton *button : m_scopedActionButtons)
+        button->setEnabled(enabled);
     if (m_refreshBtn) m_refreshBtn->setEnabled(enabled);
     if (m_restoreBtn) m_restoreBtn->setEnabled(enabled);
     if (m_repairBtn) m_repairBtn->setEnabled(enabled);
     if (m_autoremoveBtn) m_autoremoveBtn->setEnabled(enabled);
-    if (m_distroSyncBtn) m_distroSyncBtn->setEnabled(enabled);
 }
 
 void MainWindow::onRepairRpmDB() {
@@ -417,25 +465,14 @@ void MainWindow::onAutoRemove() {
     runHelper("autoremove", QString(), i18n("Cleaning unused packages..."), QStringLiteral("autoremove"), true);
 }
 
-void MainWindow::onDistroSync() {
-    int ret = KMessageBox::questionTwoActions(this,
-                 i18n("This will synchronize your system with the repository via 'dnf distro-sync -y'. Continue?"),
-                 i18n("Confirm"),
-                 KGuiItem(i18n("Continue")),
-                 KGuiItem(i18n("Cancel")));
-    if (ret != KMessageBox::PrimaryAction) return;
-
-    runHelper("distro-sync", QString(), i18n("Synchronizing distribution..."), QStringLiteral("distro-sync"), true);
-}
-
 void MainWindow::onProcessReadyRead() {
     QString output = QString::fromLocal8Bit(m_process->readAllStandardOutput());
     if (!output.isEmpty()) {
-        m_outputEdit->append(output);
+        m_outputEdit->appendPlainText(output);
     }
     QString error = QString::fromLocal8Bit(m_process->readAllStandardError());
     if (!error.isEmpty()) {
-        m_outputEdit->append(QString("<span style=\"color:#cc0000;\">%1</span>").arg(error.toHtmlEscaped()));
+        m_outputEdit->appendPlainText(error);
     }
 }
 
@@ -480,7 +517,7 @@ void MainWindow::onProcessFinished(int exitCode, QProcess::ExitStatus exitStatus
                 statusBar()->showMessage(i18n("Failed to apply configuration"));
             }
         } else {
-            // 维护类命令（rebuilddb / autoremove / distro-sync / refresh-cache）
+            // 维护类命令（rebuilddb / autoremove / refresh-cache）
             if (success) {
                 resultMsg = i18n("Command completed successfully.");
                 statusBar()->showMessage(i18n("Task finished"));
@@ -491,7 +528,7 @@ void MainWindow::onProcessFinished(int exitCode, QProcess::ExitStatus exitStatus
         }
     }
 
-    m_outputEdit->append(QString("\n--- %1 ---").arg(resultMsg));
+    m_outputEdit->appendPlainText(QString("\n--- %1 ---").arg(resultMsg));
 
     if (success)
         KMessageBox::information(this, resultMsg, i18n("Success"));

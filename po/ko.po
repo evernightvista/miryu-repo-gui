@@ -1,14 +1,14 @@
-# Copyright (C) 2027 Evernight Vista Team
-# This file is distributed under the same license as the Evernight Vista Repository Manager package.
-# Evernight Vista Team <13278297951@sina.cn>, 2027.
+# Copyright (C) 2027 Miryu Repository Manager
+# This file is distributed under the same license as the Miryu Repository Manager package.
+# KairikiFedora <13278297951@sina.cn>, 2027.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Miryu Repository Manager 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 12:15+0800\n"
-"PO-Revision-Date: 2027-01-01 00:00+0900\n"
-"Last-Translator: Evernight Vista Team <13278297951@sina.cn>\n"
+"POT-Creation-Date: 2026-11-13 19:43+0800\n"
+"PO-Revision-Date: 2026-11-13 20:00+0800\n"
+"Last-Translator: KairikiFedora <13278297951@sina.cn>\n"
 "Language-Team: Evernight Vista Team <13278297951@sina.cn>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Miryu Repository Manager"
 msgstr "Miryu 리포지토리 관리자"
 
-#: src/MainWindow.cpp:75
+#: src/MainWindow.cpp:76
 msgid ""
 "Each repository can independently select a mirror source. Click 'Apply' to "
 "take effect. Click 'Test Speed' to check the response time of each mirror."
@@ -27,130 +27,130 @@ msgstr ""
 "각 저장소는 독립적으로 미러 소스를 선택할 수 있습니다. '적용'을 클릭하면 적용"
 "됩니다. '속도 테스트'를 클릭하면 각 미러의 응답 시간을 확인할 수 있습니다."
 
-#: src/MainWindow.cpp:86
+#: src/MainWindow.cpp:87
 msgid "Evernight Vista"
 msgstr "Evernight Vista"
 
-#: src/MainWindow.cpp:88
+#: src/MainWindow.cpp:89
 msgid "RPM Fusion"
 msgstr "RPM Fusion"
 
-#: src/MainWindow.cpp:90
+#: src/MainWindow.cpp:91
 msgid "Terra"
 msgstr "Terra"
 
-#: src/MainWindow.cpp:99
+#: src/MainWindow.cpp:100
 msgid "Maintenance"
 msgstr "유지 관리"
 
-#: src/MainWindow.cpp:104
+#: src/MainWindow.cpp:105 src/MainWindow.cpp:196
 msgid "Apply Changes"
 msgstr "변경 사항 적용"
 
-#: src/MainWindow.cpp:108
+#: src/MainWindow.cpp:109
 msgid "Refresh Cache"
 msgstr "캐시 새로 고침"
 
-#: src/MainWindow.cpp:112
+#: src/MainWindow.cpp:113 src/MainWindow.cpp:203
 msgid "Restore Defaults"
 msgstr "기본값 복원"
 
-#: src/MainWindow.cpp:118
+#: src/MainWindow.cpp:119
 msgid "Ready"
 msgstr "준비됨"
 
-#: src/MainWindow.cpp:138
+#: src/MainWindow.cpp:166
 msgid "Software repositories for %1"
 msgstr "%1의 소프트웨어 저장소"
 
-#: src/MainWindow.cpp:147
+#: src/MainWindow.cpp:175
 msgid "Enable"
 msgstr "사용"
 
-#: src/MainWindow.cpp:160
+#: src/MainWindow.cpp:188
 msgid "Test Speed"
 msgstr "속도 테스트"
 
-#: src/MainWindow.cpp:194
+#: src/MainWindow.cpp:244
 msgid "No testable mirrors (only baseurl supported)"
 msgstr "테스트 가능한 미러가 없습니다 (baseurl만 지원됨)"
 
-#: src/MainWindow.cpp:194 src/MainWindow.cpp:264 src/MainWindow.cpp:311
+#: src/MainWindow.cpp:244 src/MainWindow.cpp:315 src/MainWindow.cpp:362
 msgid "Info"
 msgstr "정보"
 
-#: src/MainWindow.cpp:199
+#: src/MainWindow.cpp:249
 msgid "Speed Testing - %1"
 msgstr "속도 테스트 - %1"
 
-#: src/MainWindow.cpp:210
+#: src/MainWindow.cpp:260
 msgid "Close"
 msgstr "닫기"
 
-#: src/MainWindow.cpp:226
+#: src/MainWindow.cpp:276
 msgid "%v / %m"
 msgstr "%v / %m"
 
-#: src/MainWindow.cpp:237
+#: src/MainWindow.cpp:287
 msgid "%1: 403 (Access Denied)"
 msgstr "%1: 403 (액세스 거부)"
 
-#: src/MainWindow.cpp:239
+#: src/MainWindow.cpp:289
 msgid "%1: Failed"
 msgstr "%1: 실패"
 
-#: src/MainWindow.cpp:241
+#: src/MainWindow.cpp:291
 msgid "%1: %2 ms"
 msgstr "%1: %2 밀리초"
 
-#: src/MainWindow.cpp:264 src/MainWindow.cpp:311
+#: src/MainWindow.cpp:315 src/MainWindow.cpp:362
 msgid "No repositories configured"
 msgstr "구성된 저장소가 없습니다"
 
-#: src/MainWindow.cpp:274 src/MainWindow.cpp:320
+#: src/MainWindow.cpp:325 src/MainWindow.cpp:371
 msgid "Failed to prepare repository configuration."
 msgstr "저장소 구성을 준비하지 못했습니다."
 
-#: src/MainWindow.cpp:274 src/MainWindow.cpp:320 src/MainWindow.cpp:499
+#: src/MainWindow.cpp:325 src/MainWindow.cpp:371 src/MainWindow.cpp:536
 msgid "Error"
 msgstr "오류"
 
-#: src/MainWindow.cpp:278
+#: src/MainWindow.cpp:329
 msgid "Applying configuration..."
 msgstr "구성을 적용하는 중..."
 
-#: src/MainWindow.cpp:283
-msgid "This will execute 'dnf makecache'. Continue?"
-msgstr "'dnf makecache'를 실행합니다. 계속하시겠습니까?"
+#: src/MainWindow.cpp:334
+msgid "This will execute 'dnf makecache --refresh'. Continue?"
+msgstr "'dnf makecache --refresh'를 실행합니다. 계속하시겠습니까?"
 
-#: src/MainWindow.cpp:284 src/MainWindow.cpp:295 src/MainWindow.cpp:401
-#: src/MainWindow.cpp:412 src/MainWindow.cpp:423
+#: src/MainWindow.cpp:335 src/MainWindow.cpp:346 src/MainWindow.cpp:449
+#: src/MainWindow.cpp:460
 msgid "Confirm"
 msgstr "확인"
 
-#: src/MainWindow.cpp:285 src/MainWindow.cpp:296 src/MainWindow.cpp:402
-#: src/MainWindow.cpp:413 src/MainWindow.cpp:424
+#: src/MainWindow.cpp:336 src/MainWindow.cpp:347 src/MainWindow.cpp:450
+#: src/MainWindow.cpp:461
 msgid "Continue"
 msgstr "계속"
 
-#: src/MainWindow.cpp:286 src/MainWindow.cpp:297 src/MainWindow.cpp:403
-#: src/MainWindow.cpp:414 src/MainWindow.cpp:425
+#: src/MainWindow.cpp:337 src/MainWindow.cpp:348 src/MainWindow.cpp:451
+#: src/MainWindow.cpp:462
 msgid "Cancel"
 msgstr "취소"
 
-#: src/MainWindow.cpp:289
+#: src/MainWindow.cpp:340
 msgid "Refreshing cache..."
 msgstr "캐시를 새로 고치는 중..."
 
-#: src/MainWindow.cpp:294
+#: src/MainWindow.cpp:345
 msgid "This will restore all repositories to default configuration. Continue?"
 msgstr "모든 저장소를 기본 구성으로 복원합니다. 계속하시겠습니까?"
 
-#: src/MainWindow.cpp:324
+#: src/MainWindow.cpp:375
 msgid "Restoring default configuration..."
 msgstr "기본 구성을 복원하는 중..."
 
-#: src/MainWindow.cpp:333
+#: src/MainWindow.cpp:384
 msgid ""
 "Perform system maintenance tasks for DNF/RPM. Each action asks for "
 "administrator authentication through polkit."
@@ -158,98 +158,83 @@ msgstr ""
 "DNF/RPM 시스템 유지 관리 작업을 수행합니다. 각 작업은 polkit을 통해 관리자 인"
 "증을 요청합니다."
 
-#: src/MainWindow.cpp:339
+#: src/MainWindow.cpp:390
 msgid "Repair RPM Database"
 msgstr "RPM 데이터베이스 복구"
 
-#: src/MainWindow.cpp:343
+#: src/MainWindow.cpp:394
 msgid "Clean Unused Packages (autoremove)"
 msgstr "사용하지 않는 패키지 정리 (autoremove)"
 
-#: src/MainWindow.cpp:347
-msgid "Synchronize Distribution (distro-sync)"
-msgstr "배포판 동기화 (distro-sync)"
-
-#: src/MainWindow.cpp:400
+#: src/MainWindow.cpp:448
 msgid "This will rebuild the RPM database using 'rpm --rebuilddb'. Continue?"
 msgstr ""
 "'rpm --rebuilddb'를 사용하여 RPM 데이터베이스를 재구축합니다. 계속하시겠습니"
 "까?"
 
-#: src/MainWindow.cpp:406
+#: src/MainWindow.cpp:454
 msgid "Repairing RPM database..."
 msgstr "RPM 데이터베이스를 복구하는 중..."
 
-#: src/MainWindow.cpp:411
+#: src/MainWindow.cpp:459
 msgid ""
 "This will remove unnecessary packages via 'dnf autoremove -y'. Continue?"
 msgstr ""
 "'dnf autoremove -y'를 통해 불필요한 패키지를 제거합니다. 계속하시겠습니까?"
 
-#: src/MainWindow.cpp:417
+#: src/MainWindow.cpp:465
 msgid "Cleaning unused packages..."
 msgstr "사용하지 않는 패키지를 정리하는 중..."
 
-#: src/MainWindow.cpp:422
-msgid ""
-"This will synchronize your system with the repository via 'dnf distro-sync -"
-"y'. Continue?"
-msgstr ""
-"'dnf distro-sync -y'를 통해 시스템을 저장소와 동기화합니다. 계속하시겠습니까?"
-
-#: src/MainWindow.cpp:428
-msgid "Synchronizing distribution..."
-msgstr "배포판을 동기화하는 중..."
-
-#: src/MainWindow.cpp:453
+#: src/MainWindow.cpp:490
 msgid "Authentication was dismissed."
 msgstr "인증이 취소되었습니다."
 
-#: src/MainWindow.cpp:454
+#: src/MainWindow.cpp:491
 msgid "Canceled"
 msgstr "취소됨"
 
-#: src/MainWindow.cpp:456
+#: src/MainWindow.cpp:493
 msgid "Not authorized, or the privileged helper was not found."
 msgstr "권한이 없거나 권한 도우미를 찾을 수 없습니다."
 
-#: src/MainWindow.cpp:457
+#: src/MainWindow.cpp:494
 msgid "Authorization failed"
 msgstr "권한 부여 실패"
 
-#: src/MainWindow.cpp:463
+#: src/MainWindow.cpp:500
 msgid "Repository configuration applied."
 msgstr "저장소 구성이 적용되었습니다."
 
-#: src/MainWindow.cpp:464
+#: src/MainWindow.cpp:501
 msgid "Configuration applied"
 msgstr "구성이 적용됨"
 
-#: src/MainWindow.cpp:479
+#: src/MainWindow.cpp:516
 msgid "Failed to apply configuration (exit code %1)."
 msgstr "구성 적용 실패 (종료 코드 %1)."
 
-#: src/MainWindow.cpp:480
+#: src/MainWindow.cpp:517
 msgid "Failed to apply configuration"
 msgstr "구성 적용 실패"
 
-#: src/MainWindow.cpp:485
+#: src/MainWindow.cpp:522
 msgid "Command completed successfully."
 msgstr "명령이 성공적으로 완료되었습니다."
 
-#: src/MainWindow.cpp:486
+#: src/MainWindow.cpp:523
 msgid "Task finished"
 msgstr "작업 완료"
 
-#: src/MainWindow.cpp:488
+#: src/MainWindow.cpp:525
 msgid "Command failed with exit code %1."
 msgstr "명령이 종료 코드 %1로 실패했습니다."
 
-#: src/MainWindow.cpp:489
+#: src/MainWindow.cpp:526
 msgid "Task failed"
 msgstr "작업 실패"
 
-#: src/MainWindow.cpp:497
+#: src/MainWindow.cpp:534
 msgid "Success"
 msgstr "성공"
 

@@ -1,14 +1,14 @@
-# Copyright (C) 2027 Evernight Vista Team
-# This file is distributed under the same license as the Evernight Vista Repository Manager package.
-# Evernight Vista Team <13278297951@sina.cn>, 2027.
+# Copyright (C) 2027 Miryu Repository Manager
+# This file is distributed under the same license as the Miryu Repository Manager package.
+# KairikiFedora <13278297951@sina.cn>, 2027.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Miryu Repository Manager 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 12:15+0800\n"
-"PO-Revision-Date: 2027-01-01 00:00+0900\n"
-"Last-Translator: Evernight Vista Team <13278297951@sina.cn>\n"
+"POT-Creation-Date: 2026-11-13 19:43+0800\n"
+"PO-Revision-Date: 2026-11-13 20:00+0800\n"
+"Last-Translator: KairikiFedora <13278297951@sina.cn>\n"
 "Language-Team: Evernight Vista Team <13278297951@sina.cn>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Miryu Repository Manager"
 msgstr "Miryu リポジトリマネージャ"
 
-#: src/MainWindow.cpp:75
+#: src/MainWindow.cpp:76
 msgid ""
 "Each repository can independently select a mirror source. Click 'Apply' to "
 "take effect. Click 'Test Speed' to check the response time of each mirror."
@@ -27,130 +27,130 @@ msgstr ""
 "各リポジトリは独立してミラーソースを選択できます。「適用」をクリックして有効"
 "にします。「速度テスト」をクリックすると、各ミラーの応答時間を確認できます。"
 
-#: src/MainWindow.cpp:86
+#: src/MainWindow.cpp:87
 msgid "Evernight Vista"
 msgstr "Evernight Vista"
 
-#: src/MainWindow.cpp:88
+#: src/MainWindow.cpp:89
 msgid "RPM Fusion"
 msgstr "RPM Fusion"
 
-#: src/MainWindow.cpp:90
+#: src/MainWindow.cpp:91
 msgid "Terra"
 msgstr "Terra"
 
-#: src/MainWindow.cpp:99
+#: src/MainWindow.cpp:100
 msgid "Maintenance"
 msgstr "メンテナンス"
 
-#: src/MainWindow.cpp:104
+#: src/MainWindow.cpp:105 src/MainWindow.cpp:196
 msgid "Apply Changes"
 msgstr "変更を適用"
 
-#: src/MainWindow.cpp:108
+#: src/MainWindow.cpp:109
 msgid "Refresh Cache"
 msgstr "キャッシュを更新"
 
-#: src/MainWindow.cpp:112
+#: src/MainWindow.cpp:113 src/MainWindow.cpp:203
 msgid "Restore Defaults"
 msgstr "デフォルトに戻す"
 
-#: src/MainWindow.cpp:118
+#: src/MainWindow.cpp:119
 msgid "Ready"
 msgstr "準備完了"
 
-#: src/MainWindow.cpp:138
+#: src/MainWindow.cpp:166
 msgid "Software repositories for %1"
 msgstr "%1 のソフトウェアリポジトリ"
 
-#: src/MainWindow.cpp:147
+#: src/MainWindow.cpp:175
 msgid "Enable"
 msgstr "有効"
 
-#: src/MainWindow.cpp:160
+#: src/MainWindow.cpp:188
 msgid "Test Speed"
 msgstr "速度テスト"
 
-#: src/MainWindow.cpp:194
+#: src/MainWindow.cpp:244
 msgid "No testable mirrors (only baseurl supported)"
 msgstr "テスト可能なミラーがありません（baseurl のみサポート）"
 
-#: src/MainWindow.cpp:194 src/MainWindow.cpp:264 src/MainWindow.cpp:311
+#: src/MainWindow.cpp:244 src/MainWindow.cpp:315 src/MainWindow.cpp:362
 msgid "Info"
 msgstr "情報"
 
-#: src/MainWindow.cpp:199
+#: src/MainWindow.cpp:249
 msgid "Speed Testing - %1"
 msgstr "速度テスト - %1"
 
-#: src/MainWindow.cpp:210
+#: src/MainWindow.cpp:260
 msgid "Close"
 msgstr "閉じる"
 
-#: src/MainWindow.cpp:226
+#: src/MainWindow.cpp:276
 msgid "%v / %m"
 msgstr "%v / %m"
 
-#: src/MainWindow.cpp:237
+#: src/MainWindow.cpp:287
 msgid "%1: 403 (Access Denied)"
 msgstr "%1: 403 (アクセス拒否)"
 
-#: src/MainWindow.cpp:239
+#: src/MainWindow.cpp:289
 msgid "%1: Failed"
 msgstr "%1: 失敗"
 
-#: src/MainWindow.cpp:241
+#: src/MainWindow.cpp:291
 msgid "%1: %2 ms"
 msgstr "%1: %2 ミリ秒"
 
-#: src/MainWindow.cpp:264 src/MainWindow.cpp:311
+#: src/MainWindow.cpp:315 src/MainWindow.cpp:362
 msgid "No repositories configured"
 msgstr "リポジトリが設定されていません"
 
-#: src/MainWindow.cpp:274 src/MainWindow.cpp:320
+#: src/MainWindow.cpp:325 src/MainWindow.cpp:371
 msgid "Failed to prepare repository configuration."
 msgstr "リポジトリ設定の準備に失敗しました。"
 
-#: src/MainWindow.cpp:274 src/MainWindow.cpp:320 src/MainWindow.cpp:499
+#: src/MainWindow.cpp:325 src/MainWindow.cpp:371 src/MainWindow.cpp:536
 msgid "Error"
 msgstr "エラー"
 
-#: src/MainWindow.cpp:278
+#: src/MainWindow.cpp:329
 msgid "Applying configuration..."
 msgstr "設定を適用中..."
 
-#: src/MainWindow.cpp:283
-msgid "This will execute 'dnf makecache'. Continue?"
-msgstr "'dnf makecache' を実行します。続行しますか？"
+#: src/MainWindow.cpp:334
+msgid "This will execute 'dnf makecache --refresh'. Continue?"
+msgstr "'dnf makecache --refresh' を実行します。続行しますか？"
 
-#: src/MainWindow.cpp:284 src/MainWindow.cpp:295 src/MainWindow.cpp:401
-#: src/MainWindow.cpp:412 src/MainWindow.cpp:423
+#: src/MainWindow.cpp:335 src/MainWindow.cpp:346 src/MainWindow.cpp:449
+#: src/MainWindow.cpp:460
 msgid "Confirm"
 msgstr "確認"
 
-#: src/MainWindow.cpp:285 src/MainWindow.cpp:296 src/MainWindow.cpp:402
-#: src/MainWindow.cpp:413 src/MainWindow.cpp:424
+#: src/MainWindow.cpp:336 src/MainWindow.cpp:347 src/MainWindow.cpp:450
+#: src/MainWindow.cpp:461
 msgid "Continue"
 msgstr "続行"
 
-#: src/MainWindow.cpp:286 src/MainWindow.cpp:297 src/MainWindow.cpp:403
-#: src/MainWindow.cpp:414 src/MainWindow.cpp:425
+#: src/MainWindow.cpp:337 src/MainWindow.cpp:348 src/MainWindow.cpp:451
+#: src/MainWindow.cpp:462
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/MainWindow.cpp:289
+#: src/MainWindow.cpp:340
 msgid "Refreshing cache..."
 msgstr "キャッシュを更新中..."
 
-#: src/MainWindow.cpp:294
+#: src/MainWindow.cpp:345
 msgid "This will restore all repositories to default configuration. Continue?"
 msgstr "すべてのリポジトリをデフォルト設定に戻します。続行しますか？"
 
-#: src/MainWindow.cpp:324
+#: src/MainWindow.cpp:375
 msgid "Restoring default configuration..."
 msgstr "デフォルト設定を復元中..."
 
-#: src/MainWindow.cpp:333
+#: src/MainWindow.cpp:384
 msgid ""
 "Perform system maintenance tasks for DNF/RPM. Each action asks for "
 "administrator authentication through polkit."
@@ -158,96 +158,81 @@ msgstr ""
 "DNF/RPM のシステムメンテナンスタスクを実行します。各アクションは polkit を通"
 "じて管理者認証を要求します。"
 
-#: src/MainWindow.cpp:339
+#: src/MainWindow.cpp:390
 msgid "Repair RPM Database"
 msgstr "RPM データベースを修復"
 
-#: src/MainWindow.cpp:343
+#: src/MainWindow.cpp:394
 msgid "Clean Unused Packages (autoremove)"
 msgstr "未使用パッケージを削除 (autoremove)"
 
-#: src/MainWindow.cpp:347
-msgid "Synchronize Distribution (distro-sync)"
-msgstr "ディストリビューションを同期 (distro-sync)"
-
-#: src/MainWindow.cpp:400
+#: src/MainWindow.cpp:448
 msgid "This will rebuild the RPM database using 'rpm --rebuilddb'. Continue?"
 msgstr ""
 "'rpm --rebuilddb' を使用して RPM データベースを再構築します。続行しますか？"
 
-#: src/MainWindow.cpp:406
+#: src/MainWindow.cpp:454
 msgid "Repairing RPM database..."
 msgstr "RPM データベースを修復中..."
 
-#: src/MainWindow.cpp:411
+#: src/MainWindow.cpp:459
 msgid ""
 "This will remove unnecessary packages via 'dnf autoremove -y'. Continue?"
 msgstr "'dnf autoremove -y' で不要なパッケージを削除します。続行しますか？"
 
-#: src/MainWindow.cpp:417
+#: src/MainWindow.cpp:465
 msgid "Cleaning unused packages..."
 msgstr "未使用パッケージを削除中..."
 
-#: src/MainWindow.cpp:422
-msgid ""
-"This will synchronize your system with the repository via 'dnf distro-sync -"
-"y'. Continue?"
-msgstr ""
-"'dnf distro-sync -y' でシステムをリポジトリと同期します。続行しますか？"
-
-#: src/MainWindow.cpp:428
-msgid "Synchronizing distribution..."
-msgstr "ディストリビューションを同期中..."
-
-#: src/MainWindow.cpp:453
+#: src/MainWindow.cpp:490
 msgid "Authentication was dismissed."
 msgstr "認証がキャンセルされました。"
 
-#: src/MainWindow.cpp:454
+#: src/MainWindow.cpp:491
 msgid "Canceled"
 msgstr "キャンセルされました"
 
-#: src/MainWindow.cpp:456
+#: src/MainWindow.cpp:493
 msgid "Not authorized, or the privileged helper was not found."
 msgstr "認証されていないか、特権ヘルパーが見つかりませんでした。"
 
-#: src/MainWindow.cpp:457
+#: src/MainWindow.cpp:494
 msgid "Authorization failed"
 msgstr "認証に失敗しました"
 
-#: src/MainWindow.cpp:463
+#: src/MainWindow.cpp:500
 msgid "Repository configuration applied."
 msgstr "リポジトリ設定が適用されました。"
 
-#: src/MainWindow.cpp:464
+#: src/MainWindow.cpp:501
 msgid "Configuration applied"
 msgstr "設定が適用されました"
 
-#: src/MainWindow.cpp:479
+#: src/MainWindow.cpp:516
 msgid "Failed to apply configuration (exit code %1)."
 msgstr "設定の適用に失敗しました (終了コード %1)。"
 
-#: src/MainWindow.cpp:480
+#: src/MainWindow.cpp:517
 msgid "Failed to apply configuration"
 msgstr "設定の適用に失敗しました"
 
-#: src/MainWindow.cpp:485
+#: src/MainWindow.cpp:522
 msgid "Command completed successfully."
 msgstr "コマンドが正常に完了しました。"
 
-#: src/MainWindow.cpp:486
+#: src/MainWindow.cpp:523
 msgid "Task finished"
 msgstr "タスクが完了しました"
 
-#: src/MainWindow.cpp:488
+#: src/MainWindow.cpp:525
 msgid "Command failed with exit code %1."
 msgstr "コマンドが終了コード %1 で失敗しました。"
 
-#: src/MainWindow.cpp:489
+#: src/MainWindow.cpp:526
 msgid "Task failed"
 msgstr "タスクが失敗しました"
 
-#: src/MainWindow.cpp:497
+#: src/MainWindow.cpp:534
 msgid "Success"
 msgstr "成功"
 

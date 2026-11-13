@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(miryu-repo-gui VERSION 1.0.2 LANGUAGES CXX)
+project(miryu-repo-gui VERSION 45.0.0 LANGUAGES CXX)
 
 set(QT_MIN_VERSION "6.5.0")
 set(KF_MIN_VERSION "6.0.0")

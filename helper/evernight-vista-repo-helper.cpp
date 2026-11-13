@@ -45,7 +45,7 @@ static std::string detectRepoDir() {
 
 static const std::string REPO_DIR   = detectRepoDir();
 static const std::string BACKUP_DIR = REPO_DIR + "/backup";
-static const char *TEXT_DOMAIN = "miryu-repo-gui";
+static const char *TEXT_DOMAIN = "miryu-repo-helper";
 static const char *LOCALE_DIR  = "/usr/share/locale";
 
 #define _(String) gettext(String)
@@ -232,7 +232,7 @@ int main(int argc, char *argv[]) {
 
     if (argc < 2) {
         die(std::string(_("Usage: miryu-repo-helper ")) +
-            _("<apply|rebuilddb|autoremove|distro-sync|refresh-cache> [args]"), 2);
+            _("<apply|rebuilddb|autoremove|refresh-cache> [args]"), 2);
     }
 
     std::string sub = argv[1];
@@ -244,10 +244,8 @@ int main(int argc, char *argv[]) {
         runCommand({"rpm", "--rebuilddb"});
     } else if (sub == "autoremove") {
         runCommand({"dnf", "autoremove", "-y"});
-    } else if (sub == "distro-sync") {
-        runCommand({"dnf", "distro-sync", "-y"});
     } else if (sub == "refresh-cache") {
-        runCommand({"dnf", "makecache"});
+        runCommand({"dnf", "makecache", "--refresh"});
     } else {
         die(std::string(_("Unknown subcommand: ")) + sub, 2);
     }
